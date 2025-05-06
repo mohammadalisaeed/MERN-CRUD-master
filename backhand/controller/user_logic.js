@@ -36,6 +36,25 @@ let b = require("bcrypt")
         } catch (error) {
             res.status(501).json({msg:error.message})
         }
+    },
+    update_record : async function (req,res){
+        try {
+            let {id} =req.params;
+            let {name, age, email, gender} =req.body
+            let id_exist = await user.findById(id);
+            if (id_exist) {
+                let updaterecord ={
+                    name : name,
+                    email : email,
+                    age : age,
+                    gender : gender
+                }
+                await user.findByIdAndUpdate(id,updaterecord)
+                return res.status(200).json({msg:"user updated succesfully"})
+            }
+        } catch (error) {
+            res.status(501).json({msg:error.message})
+        }
     }
  }
  module.exports=user_function;
