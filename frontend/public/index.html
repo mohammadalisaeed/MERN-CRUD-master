@@ -1,53 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
-
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Gym Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/jquery.barfiller.js"></script>
-    <script src="js/jquery.slicknav.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/main.js"></script>
+    <div class="container-scroller">
+      <!-- Navbar -->
+      <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex justify-content-center">
+          <a class="navbar-brand brand-logo" href="index.html"><h4>Gym Admin</h4></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+          <ul class="navbar-nav navbar-nav-right">
+            <li class="nav-item nav-profile dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+                <div class="nav-profile-text">
+                  <p class="mb-1 text-black">Admin</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Sidebar -->
+      <div class="container-fluid page-body-wrapper">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Main Panel -->
+        <div class="main-panel">
+          <div class="content-wrapper">
+
+            <!-- Gym Themed Content -->
+            <div class="row">
+              <div class="col-12 text-center mb-4">
+                <h1>Welcome to FitZone Gym</h1>
+                <p>Your ultimate fitness destination!</p>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Card 1 -->
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-primary text-white">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Total Members</h4>
+                    <h2 class="mb-5">150</h2>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-success text-white">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">Monthly Revenue</h4>
+                    <h2 class="mb-5">$3,500</h2>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col-md-4 stretch-card grid-margin">
+                <div class="card bg-gradient-info text-white">
+                  <div class="card-body">
+                    <h4 class="font-weight-normal mb-3">New Signups</h4>
+                    <h2 class="mb-5">25</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Gym Schedule -->
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Today's Schedule</h4>
+                    <ul>
+                      <li>6:00 AM - CrossFit</li>
+                      <li>8:00 AM - Cardio Blast</li>
+                      <li>5:00 PM - Zumba</li>
+                      <li>7:00 PM - Weight Training</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Trainer Info -->
+              <div class="col-md-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Top Trainers</h4>
+                    <ul>
+                      <li>John Doe - Strength Coach</li>
+                      <li>Jane Smith - Yoga Expert</li>
+                      <li>Mike Johnson - HIIT Specialist</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer or Extra Section -->
+            <div class="row">
+              <div class="col-12 text-center mt-4">
+                <p>&copy; 2025 FitZone Gym. All rights reserved.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- End Main Panel -->
+      </div>
+    </div>
+
+    <!-- plugins:js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="path/to/off-canvas.js"></script>
+<script src="path/to/misc.js"></script>
+
   </body>
 </html>
